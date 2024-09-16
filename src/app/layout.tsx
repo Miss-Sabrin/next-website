@@ -1,7 +1,14 @@
+import HeaderMain from "@/components/HeaderMain";
+import HeaderTop from "@/components/HeaderTop";
+import Navbar from "@/components/Navbar";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import "./globals.css";
+import "slick-carousel/slick/slick-theme.css"; // Theme styles (optional)
+import "slick-carousel/slick/slick.css"; // Basic slick-carousel styles
 
+import Footer from "@/components/Footer";
+import MobNavbar from "@/components/MobNavbar";
+import "./globals.css";
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -26,9 +33,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      
+        <HeaderTop/>
+        <HeaderMain/>
+        <Navbar/>
+        <MobNavbar/>
+      
         {children}
+        <Footer/>
       </body>
     </html>
   );

@@ -14,10 +14,15 @@
   }
 }
 
-body {
+/* body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+} */
+
+.navbar_link:hover{
+  color: #ff8f9c;
+  transition: all 0.4s;
 }
 
 @layer utilities {
